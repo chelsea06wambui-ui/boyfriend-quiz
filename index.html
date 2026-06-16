@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Well Do You Know Me? ❤️</title>
+
+<style>
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#ffd6e7,#ffeef5);
+    margin:0;
+    padding:20px;
+}
+
+.container{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    color:#ff4f8b;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.question{
+    margin-bottom:25px;
+}
+
+.question p{
+    font-weight:bold;
+    color:#444;
+}
+
+select{
+    width:100%;
+    padding:12px;
+    border:2px solid #ffc0d6;
+    border-radius:10px;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    background:#ff4f8b;
+    color:white;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff2f74;
+}
+
+#result{
+    margin-top:30px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    display:none;
+}
+
+.score{
+    font-size:40px;
+    color:#ff4f8b;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💕 How Well Do You Know Me? 💕</h1>
+
+<p class="subtitle">
+Let's see if you're really paying attention 😘
+</p>
+
+<div id="quiz">
+
+<div class="question">
+<p>1. What is my favorite color?</p>
+<select id="q1">
+<option value="">Choose one</option>
+<option value="0">Blue</option>
+<option value="1">Pink</option>
+<option value="0">Black</option>
+<option value="0">Purple</option>
+</select>
+</div>
+
+<div class="question">
+<p>2. What is my favorite food?</p>
+<select id="q2">
+<option value="">Choose one</option>
+<option value="0">Pizza</option>
+<option value="1">Chicken</option>
+<option value="0">Burgers</option>
+<option value="0">Chapati</option>
+</select>
+</div>
+
+<div class="question">
+<p>3. What is my dream vacation destination?</p>
+<select id="q3">
+<option value="">Choose one</option>
+<option value="0">Dubai</option>
+<option value="1">Seychelles</option>
+<option value="0">Paris</option>
+<option value="0">Maldives</option>
+</select>
+</div>
+
+<div class="question">
+<p>4. What is my favorite drink?</p>
+<select id="q4">
+<option value="">Choose one</option>
+<option value="1">Milkshake</option>
+<option value="0">Soda</option>
+<option value="0">Cocktails</option>
+<option value="0">Alcohol</option>
+</select>
+</div>
+
+<div class="question">
+<p>5. What is my birthday month?</p>
+<select id="q5">
+<option value="">Choose one</option>
+<option value="0">January</option>
+<option value="1">March</option>
+<option value="0">June</option>
+<option value="0">December</option>
+</select>
+</div>
+
+<div class="question">
+<p>6. What is my biggest pet peeve?</p>
+<select id="q6">
+<option value="">Choose two</option>
+<option value="1">Dripping tap</option>
+<option value="1">Open doors and closets</option>
+<option value="0">Loud chewing</option>
+<option value="0">Messiness</option>
+</select>
+</div>
+
+<div class="question">
+<p>7. What is my favorite movie genre?</p>
+<select id="q7">
+<option value="">Choose two</option>
+<option value="1">Drama</option>
+<option value="0">Horror</option>
+<option value="1">Thriller</option>
+<option value="0">Sci-Fi</option>
+</select>
+</div>
+
+<div class="question">
+<p>8. What is my favorite dessert?</p>
+<select id="q8">
+<option value="">Choose one</option>
+<option value="0">Ice Cream</option>
+<option value="0">Cup cakes</option>
+<option value="1">Cake</option>
+<option value="0">Cookies</option>
+</select>
+</div>
+
+<div class="question">
+<p>9. What is my favorite thing about you?</p>
+<select id="q9">
+<option value="">Choose two</option>
+<option value="1">Your Clinginess</option>
+<option value="0">Your height</option>
+<option value="0">Your scent</option>
+<option value="1">Your lashes</option>
+</select>
+</div>
+
+<div class="question">
+<p>10. What is my favorite season?</p>
+<select id="q10">
+<option value="">Choose one</option>
+<option value="0">Autumn</option>
+<option value="0">Winter</option>
+<option value="1">Summer</option>
+<option value="0">Spring</option>
+</select>
+</div>
+
+<div class="question">
+<p>11. What is my dream job?</p>
+<select id="q11">
+<option value="">Choose one</option>
+<option value="1">Data analyst</option>
+<option value="0">IT project manager</option>
+<option value="0">Software manager</option>
+<option value="0">Chef</option>
+</select>
+</div>
+
+<div class="question">
+<p>12. What is my favorite animal?</p>
+<select id="q12">
+<option value="">Choose two</option>
+<option value="0">Cat</option>
+<option value="1">Hamster</option>
+<option value="1">Pomeranian</option>
+<option value="0">Guinea pigs</option>
+</select>
+</div>
+
+<div class="question">
+<p>13. What is my favorite music genre?</p>
+<select id="q13">
+<option value="">Choose two</option>
+<option value="1">RnB</option>
+<option value="0">Amapiano</option>
+<option value="0">Hiphop</option>
+<option value="1">Afrobeats</option>
+</select>
+</div>
+
+<div class="question">
+<p>14. Where would I most like to go on a date?</p>
+<select id="q14">
+<option value="">Choose one</option>
+<option value="1">Restaurant</option>
+<option value="0">Mall</option>
+<option value="0">Gym</option>
+<option value="0">Beach</option>
+</select>
+</div>
+
+<div class="question">
+<p>15. 	If I had a superpower, what would it be?</p>
+<select id="q15">
+<option value="">Choose one</option>
+<option value="1">Shape shifting</option>
+<option value="0">Time travel</option>
+<option value="0">Telepathy</option>
+<option value="0">Invisibility</option>
+</select>
+</div>
+
+<button onclick="calculateScore()">Submit My Answers ❤️</button>
+
+<div id="result"></div>
+
+</div>
+
+</div>
+
+<script>
+function calculateScore() {
+
+let score = 0;
+
+for(let i=1;i<=15;i++){
+let answer = document.getElementById("q"+i).value;
+
+if(answer === ""){
+alert("Please answer all questions before submitting ❤️");
+return;
+}
+
+score += Number(answer);
+}
+
+let message = "";
+
+if(score <= 5){
+message = "😭 Do you even know me?";
+}
+else if(score <= 10){
+message = "😊 Not bad! You know a few things about me.";
+}
+else if(score <= 13){
+message = "🥰 Wow! You know me really well.";
+}
+else{
+message = "💍 Soulmate Status Unlocked ❤️";
+}
+
+document.getElementById("result").style.display = "block";
+document.getElementById("result").innerHTML =
+`<div class="score">${score}/15</div><br>${message}`;
+}
+</script>
+
+</body>
+</html>
